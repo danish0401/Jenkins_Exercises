@@ -1,0 +1,4 @@
+1. visudo
+uncomment NO PASSWD required
+2. sudo usermod -aG wheel jenkins
+add jenkins to wheel

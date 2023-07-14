@@ -1,0 +1,33 @@
+pipeline {
+    agent {
+        label {
+            label "jnlpSlaveNode"
+        }
+    }
+    stages {
+ 
+        stage('Stage 1') {
+            steps {
+                //sh cdk
+                sh '''#!/bin/bash
+                        echo "Running Stage 1"
+                        hostname 
+                '''
+              }
+        }
+        stage( 'Stage 2' ){
+            steps{
+                sh '''#!/bin/bash
+                        echo "Runnig Stage 2 "
+                    '''
+            }
+        }              
+        stage( 'Stage 3' ){
+            steps{
+                sh '''#!/bin/bash
+                        echo "Runnig Stage 3 "
+                    '''
+            }
+        }              
+            }
+}
